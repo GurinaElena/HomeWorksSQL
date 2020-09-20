@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "5.2.1"
+}
+
+group 'hwsql'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.2'
+    testImplementation 'mysql:mysql-connector-java:8.0.19'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'commons-dbutils:commons-dbutils:1.7'
+    testImplementation 'com.codeborne:selenide:5.11.1'
+}
+
+test {
+    useJUnitPlatform()
+}
